@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author" content="정혜경">
+	<meta name="description" content="정혜경의 포토폴리오 v-0.0.1">
+	<meta name="keywords" content="포토폴리오, 신입 개발자, 풀스택 개발자. 백엔드, 프론트 엔드">
+	<meta property="og:url" content="http://jhg09789.dothome.co.kr/port">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="정혜경의 포토폴리오">
+	<meta property="og:description" content="정혜경의 포토폴리오 v-0.0.1">
+	<meta property="og:image" content="https://jhg09789.dothome.co.kr/port/images/logo.png">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/ratio_adj.css">
+	<link rel="stylesheet" href="css/flying.css">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400&display=swap&subset=korean"
+		rel="stylesheet">
+	<!--구글 폰트-->
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<title>정혜경의 포토폴리오</title>
+</head>
+
+<body>
+	<!----------------------------------------------------------->
+	<div class='snapbox' id='portfolio'>
+		<div id='portfolio_text'>
+			portfolio
+		</div>
+		<div id="container">
+			<div id="cube">
+				<div id="top"><a class='cubea' href='#aboutme'>ABOUT</a></div>
+				<div id="bottom"></div>
+				<div id="left"><a class='cubea' href='#skills'>SKILLS</a></div>
+				<div id="right"></div>
+				<div id="front"><a class='cubea' href='#project'>PROJECT</a></div>
+				<div id="rear"></div>
+			</div>
+		</div>
+	</div>
+	<!----------------------------------------------------------->
+	<div class='snapbox' id='aboutme'>
+		<div id='nav'>
+			<img id='shuttle' src="images/shuttle.png" alt="우주선">
+			<a href='#portfolio' class='navbar bar1'></a>
+			<a href='#aboutme' class='navbar bar2'></a>
+			<a href='#skills' class='navbar bar3'></a>
+			<a href='#project' class='navbar bar4'></a>
+			<a href='#contact' class='navbar bar5'></a>
+			<!-- <div class='clearboth'></div> -->
+		</div>
+		<div id='aboutme_textbox'>
+			<div id='aboutme_textbox_left'>
+				<p>
+					ABOUT ME
+				</p>
+				<img id='mypic' src="images/mypic.png" alt="나의 증명사진">
+			</div>
+			<div id='aboutme_textbox_right'>
+				<ul>
+					<li>풀스택을 꿈꾸는 개발자</li>
+					<li>2019년 1월 18일 모바일 포렌식을 활용한 sw양성자 과정 수료</li>
+					<li>
+						<spna>NAME : </spna> 정혜경
+					</li>
+					<li>
+						<spna>E-MAIL : </spna>jhg097@naver.com
+					</li>
+					<li>
+						<spna>ADDRESS : </spna>대전광역시 선화동
+					</li>
+					<li id='logo'>
+						<p>개인 로고 디자인: </p><img src="images/logo.png" alt="캣로그">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!----------------------------------------------------------->
+	<div class='snapbox' id='skills'>
+		<!--flying dot 표현----------------------------->
+		<div id='skills_nomal'>
+			<p class="dotname"></p>
+			<svg id="dline">
+				<path id="lline"></path>
+			</svg>
+			<div class="dot" alt="HTML"></div>
+			<div class="dot" alt="CSS"></div>
+			<div class="dot" alt="JavaScript"></div>
+			<div class="dot" alt="JQuery"></div>
+			<div class="dot" alt="AjAX"></div>
+			<div class="dot" alt="Vue"></div>
+			<div class="dot" alt="PHP"></div>
+			<div class="dot" alt="MYSQL"></div>
+			<div class="dot" alt="JAVA"></div>
+			<div class="dot" alt="Android Project"></div>
+			
+<!-- 최근 공부 한 것들 -->
+			<div class="dot" alt="Node"></div>
+			<div class="dot" alt="React"></div>
+		</div>
+		<!--게이지와 함께 표시---------------------------->
+		<div id='skills_score'>
+			<svg class="circle" data-name="HTML" data-value="90" data-color="red" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="CSS" data-value="90" data-color="orange" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="JavaScript" data-value="80" data-color="rgba(255,255,0)" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="JQuery" data-value="85" data-color="#74FF00" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="PHP" data-value="60" data-color="blue" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="MYSQL" data-value="70" data-color="#EB00C9" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="Vue" data-value="85" data-color="#B76AFF" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="JAVA" data-value="80" data-color="#91EBE7" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="Android Studio" data-value="50" data-color="#EBC27F" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+<!-- 최근 공부 하는 것들-->
+			<svg class="circle" data-name="React" data-value="10" data-color="#EBC27F" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="Node.js" data-value="10" data-color="#EBC27F" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			<svg class="circle" data-name="git" data-value="60" data-color="#EBC27F" data-width="12">
+				<circle class="cback"></circle>
+				<circle class="cbar"></circle><text class="ctitle"></text><text class="cvalue"></text>
+			</svg>
+			
+		</div>
+		<!--------------------------------------------->
+		<div id='skills_top'>
+			<button class='whitebtn' id='nomal'>목록만 보기</button>
+			<button class='whitebtn' id='score'>점수와 함께 보기</button>
+		</div>
+		<!-- <div class='clear'></div> -->
+	</div>
+	<!---첫번째 프로젝트-------------------------------------------------------->
+	<div class='snapbox project'>
+		<a href='http://jhg097.dothome.co.kr' class="projectbox projectbox_left" id='project'>
+			<div class='projectimg ratiobox'>
+				<img src="images/celinert_computer.PNG" alt="셀리넷">
+			</div>
+			<div class='projecttext'>
+				<h2>
+					celinet
+				</h2>
+				<ul>
+					<li>학원에 들어오고 나서 처음으로 제작한 나만의 포토폴리오입니다.</li>
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery</li>
+					<li><button class='urlbtn'>http://jhg097.dothome.co.kr</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+		<!--  -->
+		<a href='http://jhg097.dothome.co.kr/hhi' class="projectbox  projectbox_right">
+			<div class='projectimg ratiobox'>
+				<img src="images/hhi.png" alt="현대중공업 리디자인">
+			</div>
+			<div class="projecttext">
+				<h2>현대중공업<button class='badge'>앱 패키징</button></h2>
+				<ul>
+					<li>
+						제이쿼리로 만든 무한반복 슬라이더를 적용하였습니다.
+					</li>
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery</li>
+					<li><button class='urlbtn'>http://jhg097.dothome.co.kr/hhi</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<!------두번째 프로젝트 박스
+	--------------------------------------------------------------------------------------->
+	<div class='snapbox project'>
+		<a href='http://jhg097.dothome.co.kr/hsff' class="projectbox projectbox_left" id='project'>
+			<div class='projectimg ratiobox'>
+				<img src="images/hsff.png" alt="셀리넷">
+			</div>
+			<div class='projecttext'>
+				<h2>
+					건강기능식품미래포럼
+					<button class='badge'>앱 패키징</button>
+				</h2>
+				<ul>
+					<li>
+						건강기능식품미래 포럼 페이지를 반응형으로 리디자인 하였습니다.
+					</li>
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery</li>
+					<li><button class='urlbtn'>http://jhg097.dothome.co.kr/hsff</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+		<!--자고가숑 팬션 소개-->
+		<a href='http://jhg09789.dothome.co.kr' class="projectbox  projectbox_right">
+			<div class='projectimg ratiobox'>
+				<img src="images/Jac.png" alt="자고가숑">
+			</div>
+			<div class="projecttext">
+				<h2>자고가숑 팬션<button class='badge'>앱 패키징</button></h2>
+				<ul>
+					<li>
+						팬션을 흥보하는 가상의 사이트를 만들었습니다.
+					</li>
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery</li>
+					<li><button class='urlbtn'>http://jhg09789.dothome.co.kr</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<!---------세번째 프로젝트 박스
+		------------------------------------------------------------------------------------->
+	<div class='snapbox project'>
+		<a href='http://jhg09789.dothome.co.kr/weather' class="projectbox projectbox_left" id='project'>
+			<div class='projectimg2 ratiobox'>
+				<!--사진 두개 넣어야 할듯-->
+				<img src="images/weather.PNG" alt="날씨알리미">
+			</div>
+			<div class='projectimg2 ratiobox'>
+				<img src="images/weather2.PNG" alt="날씨알리미">
+			</div>
+			<div class='projecttext'>
+				<h2>
+					날씨알리미
+				</h2>
+				<ul>
+					<li>
+						open API와 AJAX를 활용한 날씨알리미 앱입니다.
+						실시간으로 매주마다, 매일마다 날씨를 확인할 수 있게 만들었으며 그 날씨에 따라 배경도 서로 연관이 되도록 제작하였습니다.
+					</li>
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery, open API, AJAX</li>
+					<li><button class='urlbtn'>http://jhg09789.dothome.co.kr/weather</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+		<!--PHP로 로그인, 게시판, 회원가입 사이트 만들기-->
+		<!--index 들어가니까 에러떠............수정해야함 -->
+		<a href='http://jhg09789.dothome.co.kr/login' class="projectbox  projectbox_right">
+			<div class='projectimg ratiobox'>
+				<img src="images/login.PNG" alt="게시판 화면">
+			</div>
+			<div class="projecttext">
+				<h2>php로 만든 서버 시스템</h2>
+				<ul>
+					<li>
+						php와 MYSQL을 활용하여 로그인시스템, 회원가입시스템, 게시판 시스템, 30일이 지나면 자동삭제를 도와주는 시스템을 만들었습니다.
+					</li>
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery, bootstrap, php, MYSQL</li>
+					<li><button class='urlbtn'>http://jhg097.dothome.co.kr/hhi</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<!--마지막 뷰로 만든 것들 아직 서버에 올리지 않았음-->
+	<div class='snapbox project'>
+		<a href='http://jhg09789.dothome.co.kr/vuetodo' class="projectbox projectbox_left" id='project'>
+			<div class='projectimg ratiobox'>
+				<!--사진 두개 넣어야 할듯-->
+				<img src="images/vuetodo.png" alt="뷰로 만든 todolist">
+			</div>
+			<div class='projecttext'>
+				<h2>
+					뷰로 만든 todolist
+					<!--앱 패키징 해야함-->
+				</h2>
+				<ul>
+					<li>
+						Vue webpack을 활용해 todolist를 구현하였습니다.
+					</li>
+					<li class='uselang'><span>사용 언어 : </span>html, css, javascript, Vue</li>
+					<li><button class='urlbtn'>http://jhg09789.dothome.co.kr/vuetodo</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+		<!--PHP로 로그인, 게시판, 회원가입 사이트 만들기-->
+		<!--index 들어가니까 에러떠............수정해야함 -->
+		<a href='http://jhg09789.dothome.co.kr/games' class="projectbox  projectbox_right">
+			<div class='projectimg ratiobox'>
+				<img src="images/games.png" alt="뷰와 제이쿼리를 활용한 게임만들기">
+			</div>
+			<div class="projecttext">
+				<h2>게임만들기</h2>
+				<ul>
+					<li>
+						1. 토끼와 거북이 달리기 게임(제이쿼리)
+					</li>
+					<li>
+						2. 탱크 게임(제이쿼리)
+					</li>
+					<li>
+						3. 가위바위보 게임(Vue)
+					</li>
+					<li>
+						4. 숫자 야구 게임(Vue)
+					</li>
+
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery, javascript, Vue</li>
+					<li><button class='urlbtn'>http://jhg097.dothome.co.kr/games</button></li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<div class='snapbox project'>
+		<a href='http://jhg09789.dothome.co.kr/boiler' class="projectbox projectbox_left" id='project'>
+			<div class='projectimg ratiobox'>
+				<!--사진 두개 넣어야 할듯-->
+				<img src="images/vuetodo.png" alt="boiler">
+			</div>
+			<div class='projecttext'>
+				<h2>
+					노드와 리액트를 이용한 로그인 페이지 만들기
+					<!--앱 패키징 해야함-->
+				</h2>
+				<ul>
+					<li>
+						노드와 리액트를 이용한 보일러플레이트
+					</li>
+					<li class='uselang'><span>사용 언어 : </span>Node, React, MongoDB, PostMan</li>
+					<li><button class='urlbtn'>http://jhg09789.dothome.co.kr/boiler</button></li>
+					<li><button class='res'>반응형</button></li>
+				</ul>
+			</div>
+		</a>
+		<!--PHP로 로그인, 게시판, 회원가입 사이트 만들기-->
+		<!--index 들어가니까 에러떠............수정해야함 -->
+		<a href='http://jhg09789.dothome.co.kr/games' class="projectbox  projectbox_right">
+			<div class='projectimg ratiobox'>
+				<img src="images/games.png" alt="뷰와 제이쿼리를 활용한 게임만들기">
+			</div>
+			<div class="projecttext">
+				<h2>게임만들기</h2>
+				<ul>
+					<li>
+						1. 토끼와 거북이 달리기 게임(제이쿼리)
+					</li>
+					<li>
+						2. 탱크 게임(제이쿼리)
+					</li>
+					<li>
+						3. 가위바위보 게임(Vue)
+					</li>
+					<li>
+						4. 숫자 야구 게임(Vue)
+					</li>
+
+					<li class='uselang'><span>사용 언어 : </span>html, css, jquery, javascript, Vue</li>
+					<li><button class='urlbtn'>http://jhg097.dothome.co.kr/games</button></li>
+				</ul>
+			</div>
+		</a>
+	</div>
+	<!------------------------------------------------------------------------------------------->
+	<div class='snapbox' id='contact'>
+		<div id='contactbox'>
+			<ol>
+				<li>
+					제가 만든 모든 앱은 반응형입니다.
+					따라서 동일한 도메인을 가지고 모든 기기에서 열람이 가능합니다.
+				</li>
+				<li>
+					모든 자료는 제 깃헙에서도 바로 확인이 가능합니다.</br>
+					<a class='urlbtn' href='https://github.com/hyekyeong123'>
+						https://github.com/hyekyeong123
+					</a>
+				</li>
+				<li>
+					혹시 이 포토폴리오를 보고 함께하시고자 싶은 마음이 생기신다면 아래 이메일로 연락 주시길 바랍니다.
+				</li>
+				<li>
+					이 포토폴리오에 사용된 기술들은 제 주력 기술인 HTML, CSS, JQuery, Ajax를 사용하였습니다.
+				</li>
+				<li>
+					지금까지 포토폴리오를 봐주셔서 감사합니다.
+				</li>
+			</ol>
+		</div>
+	</div>
+	<!---------------------------------------------------------->
+	<script src='script/script.js'></script>
+	<!-- <script src='script/scroll_snap.js'></script> -->
+	<script src='script/ratio_adj.js'></script>
+	<script src='script/flying_dot.js'></script>
+	<script src='script/score.js'></script>
+</body>
+
+</html>
+<!-- //서버에서 도서관 파일 복구해야함 -->

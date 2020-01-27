@@ -1,0 +1,677 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	color: white;
+	background-position: center;
+	background-size: cover;
+	background-image: url(../images/space3.jpg);
+	/* /하나만 쓰는 경우 절대경로 따라서 c드라이브안에서 img를 찾게됨, 몰론 라이브서버에서는 /만 해도 가능하다.
+	두개 다 적용하기 위해서는 ../를 사용해줘야함 */
+	background-attachment: fixed;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------*/
+.snapbox {
+	height: 100vh;
+	width: 100%;
+}
+
+/* 네브 만들기-----------------------------------------*/
+#nav {
+	position: fixed;
+	top: 4vh;
+	right: 5vw;
+	display: none;
+	z-index: 10000;
+}
+
+#shuttle {
+	position: absolute;
+	top: -3vh;
+	left: -15%;
+	width: 30px;
+	float: left;
+	transform: rotate(40deg);
+}
+
+.navbar {
+	width: 80px;
+	height: 4px;
+	float: left;
+	position: relative;
+}
+
+.bar1 {
+	background-color: #8545f7;
+}
+
+.bar2 {
+	background-color: #8545f7;
+}
+
+.bar3 {
+	background: linear-gradient(to right, #8545f7, #0eaed4)
+}
+
+.bar4 {
+	background-color: #0eaed4;
+}
+
+.bar5 {
+	background-color: #0eaed4;
+}
+
+/*----------------------------*/
+.bar1::after {
+	content: "portfolio";
+	font-size: 0.9rem;
+	position: absolute;
+	top: 0px;
+	left: 35px;
+	width: 4px;
+	height: 30px;
+	background: linear-gradient(to bottom, #8545f7, #0eaed4);
+	cursor: pointer;
+}
+
+/*  */
+.bar2::after {
+	content: "about";
+	font-size: 0.9rem;
+	position: absolute;
+	top: 0px;
+	left: 35px;
+	width: 4px;
+	height: 30px;
+	background: linear-gradient(to bottom, #8545f7, #0eaed4);
+	cursor: pointer;
+}
+
+
+.bar3::after {
+	content: "skills";
+	font-size: 0.9rem;
+	position: absolute;
+	top: 0px;
+	left: 35px;
+	width: 4px;
+	height: 30px;
+	background: linear-gradient(to top, #8545f7, #0eaed4);
+	cursor: pointer;
+}
+
+.bar4::after {
+	content: "project";
+	font-size: 0.9rem;
+	position: absolute;
+	top: 0px;
+	left: 35px;
+	width: 4px;
+	height: 30px;
+	background: linear-gradient(to bottom, #8545f7, #0eaed4);
+	cursor: pointer;
+}
+
+.bar5::after {
+	content: "contact";
+	font-size: 0.9rem;
+	position: absolute;
+	top: 0px;
+	left: 35px;
+	width: 4px;
+	height: 30px;
+	background: linear-gradient(to top, #8545f7, #0eaed4);
+	cursor: pointer;
+}
+
+/**/
+/*
+	첫번째 스냅박스 : 포토폴리오---------------------------------
+*/
+#portfolio_text {
+	color: white;
+	position: absolute;
+	top: 10vh;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 1.5em;
+	letter-spacing: 2em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/*주사위*/
+#container {
+	/* background-color: black; */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	perspective: 500px;
+	perspective-origin: center;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#cube {
+	position: relative;
+	width: 27vw;
+	height: 27vh;
+	left: 55%;
+	top: 50%;
+	transform: translate(-50%, -55%) rotateX(-30deg) rotateY(45deg);
+	transform-style: preserve-3d;
+	/*자식요소를 3d 공간에 배치하기*/
+	transition: all 0.5s;
+}
+
+.cubea {
+	display: block;
+	width: 100%;
+}
+
+#cube>div {
+	opacity: 0.3;
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	text-align: center;
+	line-height: 180px;
+	font-size: 2.5em;
+	font-weight: bold;
+	box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.8), 0px 0px 30px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(255, 255, 255, 0.5), inset 0px 0px 40px rgba(255, 255, 255, 0.5);
+	cursor: cell;
+	/*    backface-visibility: hidden*/
+}
+
+#top {
+	border: 1px solid white;
+	transform: translateY(-90px) rotateX(90deg);
+}
+
+#bottom {
+	border: 1px solid white;
+	transform: translateY(90px) rotateX(-90deg);
+}
+
+#left {
+	border: 1px solid white;
+	transform: translateX(-90px) rotateY(-90deg);
+}
+
+#right {
+	border: 1px solid white;
+	transform: translateX(90px) rotateY(90deg);
+}
+
+#front {
+	border: 1px solid white;
+	transform: translateZ(90px);
+}
+
+#rear {
+	border: 1px solid white;
+	transform: translateZ(-90px) rotateX(180deg);
+}
+
+.top {
+	transform: translate(-50%, -50%) rotateX(-90deg) !important;
+}
+
+.left {
+	transform: translate(-50%, -50%) rotateY(90deg) !important;
+}
+
+.front {
+	transform: translate(-50%, -50%) !important;
+}
+
+/*
+두번째 스냅박스 : aboutme----------------------------------------
+*/
+#aboutme {
+	padding-top: 40vh;
+}
+
+#mypic {
+	float: right;
+	width: 300px;
+}
+
+#aboutme_textbox {
+	background: black;
+	width: 100%;
+	height: 370px;
+	padding: 1em;
+}
+
+#aboutme_textbox_left {
+	float: left;
+	width: 30vw;
+	/* height: 100%; */
+}
+
+#aboutme_textbox_left p {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+#aboutme_textbox_right::before {
+	content: "";
+	display: block;
+	float: left;
+	width: 1px;
+	height: 350px;
+	padding: 0 !important;
+	margin-right: 100px;
+	background-color: white;
+	opacity: 30%;
+}
+
+#aboutme_textbox_right {
+	float: right;
+	width: 60vw;
+	height: 100%;
+	line-height: 1.7rem;
+	font-size: 0.9rem;
+}
+
+#logo {
+	margin-top: 20px;
+}
+
+#logo p {
+	float: left;
+}
+
+#logo img {
+	float: left;
+}
+
+/*
+세번째 스냅박스 : skils----------------------------------------
+*/
+/**/
+#skills {
+	position: relative;
+}
+
+#skills_top {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 100px;
+}
+
+.whitebtn {
+	width: 200px;
+	height: 50px;
+	color: white;
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 3px;
+	outline: none;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 10px;
+	margin: 10px;
+}
+
+.whitebtn:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #111;
+}
+
+#skills_nomal {
+	width: 100%;
+}
+
+/*기술 게이지*/
+#skills_score {
+	display: none;
+	background-color: black;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 620px;
+}
+
+.clear {
+	clear: both;
+}
+.circle {
+    width: 200px;
+	height: 200px;
+}
+.circle text{
+	fill: white;
+}
+.cvalue{
+	font-size:1.2rem;
+}
+
+/*
+네번째 스냅박스 :.project----------------------------------------
+*/
+.projectbox {
+	display: block;
+	background: linear-gradient(to top, #532b99, #29768a);
+	width: calc((100% - 60px)/3);
+	height: 78vh;
+	opacity: 0;
+	padding: 20px 20px 10px 20px;
+	cursor: pointer;
+	margin: 14vh 5vw 0vh 5vw !important;
+	border-radius: 3px;
+}
+
+.projectbox_left {
+	float: left;
+}
+
+.projectbox_right {
+	float: right;
+}
+
+.projectimg {
+	display: block;
+	background-color: black;
+	height: 60%;
+	width: 100%;
+}
+
+.projectimg img {
+	width: 100%;
+	transition: all 1s;
+}
+
+.projectimg img:hover {
+	transform: scale(1.1) translate(-50%, -50%);
+	/* transform-origin: 0 0 ; */
+}
+
+/*이미지 두개씩 들어가는것들*/
+.projectimg2 {
+	float: left;
+	display: block;
+	background-color: black;
+	height: 60%;
+	width: 50%;
+}
+
+.projectimg2 img {
+	width: 100%;
+	transition: all 1s;
+}
+
+.projectimg2 img:hover {
+	transform: scale(1.1) translate(-50%, -50%);
+	/* transform-origin: 0 0 ; */
+}
+
+/*-------------------------------------*/
+.projecttext {
+	/* padding: 7px; */
+	clear: both;
+	margin-top: 20px;
+	background-color: transparent;
+	height: 35%;
+	font-size: 1rem;
+	line-height: 1.6rem!important;
+	width: 100%;
+	padding: 20px;
+}
+.uselang{
+	
+}
+.urlbtn {
+	margin-top: 10px;
+	color: rgb(36, 36, 36);
+	font-weight: bold;
+	border: none;
+	background: linear-gradient(to right, #4e34e2, #29768a);
+	padding: 10px;
+	border-radius: 5px;
+
+}
+
+.urlbtn:hover {
+	background: linear-gradient(to right, #7d41e4, #3baeca);
+}
+
+.badge {
+	float: right;
+	border: none;
+	color: rgb(36, 36, 36);
+	background-color: yellow;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.badge:hover {
+	background-color: wheat;
+}
+
+.badge::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.res {
+	margin-top: 10px;
+	border: none;
+	color: rgb(36, 36, 36);
+	background-color: #3caeca;
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.res:hover {
+	background-color: #6ab8cc;
+}
+
+/*
+다섯번째 스냅박스 : contact----------------------------------------
+*/
+#contact {
+	clear: both;
+	padding: 5%;
+}
+
+#contactbox {
+	float: left;
+	width: 60vw;
+	height: 80vh;
+	background: linear-gradient(to top, #8545f7, #0eaed4);
+	padding: 19px 20px 20px 40px;
+}
+#contactbox li{
+	margin-bottom: 10px;
+}
+#contactbox .urlbtn{
+	cursor: pointer;
+	padding:3px;
+}
+/*--------------------------------------------------------------*/
+@media all and (max-width:1100px) {
+	body {
+		padding: 0 20px 0 20px;
+	}
+
+	.projectbox {
+		width: 100%;
+		margin: 0 !important;
+		margin-bottom: 30px !important;
+		/* 위에서  !important 썼으면 아래에서도 써줘야함*/
+
+	}
+
+	.projectbox_left {
+		float: none;
+	}
+
+	.projectbox_right {
+		float: none;
+	}
+
+	/*-------------------------------------------------------------*/
+	#mypic {
+		float: none;
+		width: 200px;
+	}
+}
+
+@media all and (max-width:1100px) {
+	#aboutme_textbox {
+		height: 500px;
+	}
+
+	#aboutme_textbox_right::before {
+		content: none;
+	}
+
+	#aboutme_textbox_right {
+		clear: both;
+		float: none;
+		width: 100%;
+		line-height: 1.7rem;
+		font-size: 0.9rem;
+	}
+
+}
+
+@media all and (max-width:730px) {
+	#portfolio_text {
+		font-size: 1.3em;
+		letter-spacing: 1.5em;
+	}
+	#contactbox{
+		width: 100%;
+	}
+}
+
+@media all and (max-width:459px) {
+	#portfolio_text {
+		font-size: 1.1em;
+		letter-spacing: 1.2em;
+		left: 65%;
+		transform: translateX(-65%);
+	}
+
+	#cube {
+		left: 35%;
+		transform: translate(-50%, -35%) rotateX(-30deg) rotateY(45deg);
+	}
+
+	#nav {
+		display: none !important;
+	}
+
+	/*--------------------------------*/
+	.projectbox {
+		height: 95vh;
+		opacity: 0;
+		padding: 10px 10px 10px 10px;
+		cursor: pointer;
+		margin: 30px 0px 0vh 0px !important;
+	}
+
+	.projectimg {
+		display: block;
+		background-color: black;
+		height: 50%;
+	}
+	.projectimg2 {
+		display: block;
+		background-color: black;
+		height: 50%;
+	}
+	.projecttext {
+		margin-top: 5px;
+		padding: 5px;
+		font-size: 0.8rem;
+		line-height: 1.2rem!important;
+	}
+
+	h2 {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+		height: 20px;
+	}
+
+	.badge {
+		margin-left: 40vw;
+		font-size: 0.2rem;
+		padding: 3px;
+	}
+	/*  */
+	.whitebtn{
+		display: none;
+	}
+	#skills_nomal{
+		display: none;
+	}
+	#skills_score{
+		display: block;
+	}
+	/*-----------------------------------*/
+	#aboutme {
+		padding-top: 100px;
+	}
+	/*게이지------------------------------------*/
+	#skills{
+		margin-bottom: 150px;
+		margin-top:150px;
+	}
+	#skills_score {
+		width: 320px;
+	}
+	.clear {
+		clear: both;
+	}
+	.circle {
+		width: 100px;
+		height: 100px;
+	}
+	.circle text{
+		fill: white;
+		font-size:0.8rem;
+	}
+	.urlbtn{
+		font-size: 0.8rem;
+	}
+	#contact {
+		clear: both;
+		padding: 0%;
+	}
+	#contactbox {
+		height: 90vh;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+}
